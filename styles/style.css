@@ -1,0 +1,500 @@
+/*
+    font-family: 'Pacifico', cursive; Pour les titres 
+
+  font-family: 'Varela Round', sans-serif;
+*/
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;  
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+@media screen and (max-width:900px)
+{
+    .container
+    {
+        flex-direction: row;
+    }
+    .menuPrincipal
+    {
+        flex-direction: row;
+    }
+    .itemMenu
+    {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .partieModificationParametre
+    {
+        margin-top: 1em;
+    }
+}
+.header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8ede3;
+}
+.titreSite
+{
+    font-family: 'Pacifico', cursive ;
+    font-size: 4.1em;
+    color:#a2b29f;
+}
+.menuPrinc
+{
+    
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5em;
+   
+    background-color: #f8ede3;
+    
+}
+/*Supprime effet visuel quand lien déja click*/
+.menuPrincipal li a:visited 
+{
+    text-decoration: none;
+    color: black;
+}
+/* Supprime la déco des liens*/
+.menuPrincipal li a:link
+{
+    text-decoration: none;
+}
+
+.menuPrincipal
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    flex-basis: 100%;
+    justify-content: space-around;
+    list-style-type: none;
+    text-decoration: none;
+}
+.itemMenu *
+{
+    padding: 0.5em;
+    background-color: #a2b29f;
+    border-radius: 0.4em;
+    color:#f8ede3;
+}
+.actif
+{
+    color:#798777;
+}
+/* Partie de la page acceuil*/
+/*je suis un geudin j'ai inversé la gauche et la droite */
+.contentAcceuil
+{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+}
+
+.partieDroiteContentAcceuil
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.partieDroiteContentAcceuil .logoEmoji
+{
+    font-size: 6em;
+    padding:1em;
+
+}
+.partieDroiteContentAcceuil .intituleContentAcceuil
+{
+    
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    color:#a2b29f;
+
+}
+.partieGaucheContentAcceuil
+{
+    padding-top: 2em;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5em;
+}
+
+
+/*Partie connexion et authentification*/
+.contentConnexionAuth
+{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    
+   
+}
+.Fconnexion
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8ede3;
+    padding: 2em;
+    padding-bottom:0em;
+    border-radius: 2em;
+    margin: 0.5em auto;
+    width: 20%;
+    height: 40%;
+}
+.Fconnexion .ligne 
+{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(3,1fr);
+}
+.Fconnexion .ligne label
+{
+    font-family: 'Pacifico', cursive; 
+    color:#798777;
+    font-size: large;
+}
+.Fconnexion .ligne input
+{
+   font-family: 'Varela Round', sans-serif;
+   background-color: #f8ede3;
+   border:none;
+   border-bottom:5px solid #798777;
+   border-radius: 2px;
+   color:#798777;
+   grid-column: 2;
+
+}
+.Fconnexion .ligne #submitConnex
+{
+    grid-column: 1;
+    background-color:#a2b29f;
+    font-family: 'Pacifico', cursive; 
+    font-size: larger;
+    color: #f8ede3;
+    padding: 1em;
+    border-radius: 2em;
+}
+.Finscription
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8ede3;
+    padding: 2em;
+    border-radius: 2em;
+    margin: 0.5em auto;
+    width: 20%;
+}
+.Finscription .ligne 
+{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(3,1fr);
+}
+.Finscription .ligne label
+{
+    font-family: 'Pacifico', cursive; 
+    color:#798777;
+    font-size: large;
+}
+
+.Finscription .ligne input
+{
+    font-family: 'Varela Round', sans-serif;
+   background-color: #f8ede3;
+   border:none;
+   border-bottom:5px solid #798777;
+   border-radius: 2px;
+   color:#798777;
+   grid-column: 2;
+
+}
+
+.Finscription .ligne #inscription
+{
+    grid-column: 1;
+    background-color:#a2b29f;
+    font-family: 'Pacifico', cursive; 
+    font-size: larger;
+    color: #f8ede3;
+    padding: 1em;
+    border-radius: 2em;
+}
+.Finscription .ligne #selectSexe
+{
+    background-color: #f8ede3;
+    border:none;
+    color:#798777;
+}
+
+/* Partie sur mes infos dans l'espace utilisateur*/
+.contentInfoUtilisateur
+{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin:8%;  
+}
+
+/*Met le nom et le prenom de l'utilisateur  de la même police*/
+.contentInfoUtilisateur .itemInfoUtilisateur:first-child
+{
+    font-family: 'Pacifico', cursive; 
+    font-size: larger;
+    color:#798777;
+}
+.itemInfoUtilisateur
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f8ede3;
+    padding: 5%;
+    border-radius: 2em;
+    margin-top: 2%;
+}
+.itemInfoUtilisateur .intituleItem
+{
+    font-family: 'Pacifico', cursive; 
+    font-size: larger;
+    color:#798777;
+}
+.itemInfoUtilisateur
+{
+    font-family: 'Varela Round', sans-serif;
+    color:#798777;
+    font-size:larger;
+}
+#alerteBasSolde
+{
+    color:#c64756;
+}
+#alerteAucunAbonnement
+{
+    color:#c64756;
+}
+#rechSolde
+{
+    background-color:#a2b29f;
+    font-family: 'Pacifico', cursive; 
+    font-size: larger;
+    color: #f8ede3;
+    border-bottom:5px solid #798777;
+    border-radius:0.8em ;
+}
+.contentInfoUtilisateur .itemInfoUtilisateur:last-child
+{
+    padding: 2%;
+}
+@media screen and (max-width:1100px)
+{
+    .contentInfoUtilisateur
+    {
+        flex-direction: column;
+    }
+    
+}
+
+/*Partie paramètre de l'utilisateur*/
+
+.contentParametre
+{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:5%;
+}
+.partieInfoUserParametre
+{
+    display: flex;
+    flex-direction: column;
+    padding: 2.4em;
+    border-radius: 1em;
+    background-color: #f8ede3;
+}
+.labelInfoUser
+{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    font-family: 'Pacifico', cursive; 
+    font-size: 1.3em;
+    color:#798777;  
+}
+.infoUser
+{
+    grid-column:2 ;
+    font-family: 'Varela Round', sans-serif;
+    color:#a2b29f;
+    font-size:1em;
+    padding-left: 0.2em;
+}
+/*Partie formulaire modification dans parametre */
+.partieModificationParametre
+{
+    padding: 2em;
+    background-color: #f8ede3;
+    border-radius: 1em;
+}
+.ligne{
+    display: grid;
+    grid-template-columns: repeat(2,45%);
+}
+.ligne label
+{
+    grid-column: 1;
+    font-family: 'Pacifico', cursive; 
+    font-size: 1.3em;
+    color:#798777;  
+}
+.FModif .ligne input
+{
+    font-family: 'Varela Round', sans-serif;
+    background-color: #f8ede3;
+    border:none;
+    border-bottom:2px solid #798777;
+    border-radius: 2px;
+    color:#798777;
+    grid-column: 2;
+}
+.ligne #modification
+{
+    margin-top: 2em;
+    padding: 0.5em;
+    background-color:#a2b29f;
+    font-family: 'Pacifico', cursive; 
+    font-size: larger;
+    color: #f8ede3;
+    border-bottom:5px solid #798777;
+    border-radius:0.8em ;
+}
+.partieModifiAbonPay
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.FPayement
+{
+    display:flex;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+.sommePayParam
+{
+    background-color: #f8ede3;
+    padding: 2.4em;
+    margin:1em;
+    border-radius: 2em;
+}
+.changeAbonParam
+{
+    background-color: #f8ede3;
+    padding: 2.4em;
+    margin: 1em;
+    border-radius: 2em;
+}
+.FPayement #modifierPay 
+{
+    margin-top: 2em;
+    padding: 0.5em;
+    background-color:#a2b29f;
+    font-family: 'Pacifico', cursive; 
+    font-size: larger;
+    color: #f8ede3;
+    border-bottom:5px solid #798777;
+    border-radius:0.8em ;
+}
+.FChoixAbonn #modifierAbon
+{
+    margin-top: 2em;
+    padding: 0.5em;
+    background-color:#a2b29f;
+    font-family: 'Pacifico', cursive; 
+    font-size: larger;
+    color: #f8ede3;
+    border-bottom:5px solid #798777;
+    border-radius:0.8em ;
+}
+.partieModifiAbonPay .sommePayParam .FPayement .ligne #sommePay
+{
+    background-color: #f8ede3;
+    border: none;
+    color:#798777;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1em;
+    border-bottom: 5px solid  #798777;
+}
+
+.changeAbonParam #selectAbonn
+{
+    background-color: #f8ede3;
+    border: none;
+    color:#798777;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1em;
+    border-bottom: 5px solid  #798777;
+}
+/*Partie station */
+.contentStation
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%;
+    margin-top:2em;
+}
+.StatDispo
+{
+    margin:2em;
+    background: #f8ede3;
+    width: 50%;
+    padding:2em;
+    border-radius: 2em;
+}
+.StatIndispo
+{
+    margin:2em;
+    background: #f8ede3;
+    width: 50%;
+    padding:2em;
+    border-radius: 2em;
+    border:2px  #c64756  solid;
+}
+.StatIndispo .intituleStat
+{
+    color:#c64756;
+}
+.StatIndispo .infoStat
+{
+    color:#c64756;
+}
+.tabStation
+{
+    display: grid;
+    flex-basis: 50%;
+    grid-template-columns:repeat(2,50%);
+}
+.intituleStat{
+    grid-column: 1;
+    font-family: 'Pacifico', cursive;
+    font-size: large;
+    color:#798777;
+}
+.infoStat
+{
+    grid-column: 2;
+    font-family: 'Varela Round', sans-serif;
+    color:#798777;
+    font-size: larger;
+}
